@@ -105,7 +105,6 @@ class Format(xmlwriter.XMLwriter):
 
         self.indent = 0
         self.shrink = 0
-        self.merge_range = 0
         self.reading_order = 0
         self.just_distrib = 0
         self.color_indexed = 0

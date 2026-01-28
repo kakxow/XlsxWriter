@@ -32,7 +32,6 @@ class ChartPie(chart.Chart):
         """
         super().__init__()
 
-        self.vary_data_color = 1
         self.rotation = 0
 
         # Set the available data label positions for this chart type.

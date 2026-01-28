@@ -324,7 +324,6 @@ class Worksheet(xmlwriter.XMLwriter):
         self.tmpdir = None
         self.is_chartsheet = False
 
-        self.ext_sheets = []
         self.fileclosed = 0
         self.excel_version = 2007
         self.excel2003_style = False
@@ -355,7 +354,6 @@ class Worksheet(xmlwriter.XMLwriter):
         self.top_left_cell = ""
 
         self.panes = []
-        self.active_pane = 3
         self.selected = 0
 
         self.page_setup_changed = False
@@ -392,8 +390,6 @@ class Worksheet(xmlwriter.XMLwriter):
 
         self.page_order = 0
         self.black_white = 0
-        self.draft_quality = 0
-        self.print_comments = 0
         self.page_start = 0
 
         self.fit_page = 0
@@ -413,7 +409,6 @@ class Worksheet(xmlwriter.XMLwriter):
         self.print_scale = 100
         self.is_right_to_left = False
         self.show_zeros = 1
-        self.leading_zeros = 0
 
         self.outline_row_level = 0
         self.outline_col_level = 0
@@ -423,8 +418,6 @@ class Worksheet(xmlwriter.XMLwriter):
         self.outline_on = 1
         self.outline_changed = False
 
-        self.names = {}
-        self.write_match = []
         self.table = defaultdict(dict)
         self.merge = []
         self.merged_cells = {}
@@ -454,10 +447,8 @@ class Worksheet(xmlwriter.XMLwriter):
         self.col_size_changed = False
         self.row_size_changed = False
 
-        self.last_shape_id = 1
         self.rel_count = 0
         self.hlink_count = 0
-        self.hlink_refs = []
         self.external_hyper_links = []
         self.external_drawing_links = []
         self.external_comment_links = []

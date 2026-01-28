@@ -47,7 +47,6 @@ class Chart(xmlwriter.XMLwriter):
         super().__init__()
 
         self.subtype = None
-        self.sheet_type = 0x0200
         self.orientation = 0x0
         self.series = []
         self.embedded = 0

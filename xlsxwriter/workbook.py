@@ -14,7 +14,7 @@ import re
 import time
 import warnings
 import zipfile
-from datetime import datetime, timezone
+from datetime import datetime
 from decimal import Decimal
 from fractions import Fraction
 from io import StringIO
@@ -112,7 +112,6 @@ class Workbook(xmlwriter.XMLwriter):
         self.worksheet_meta = WorksheetMeta()
         self.selected = 0
         self.fileclosed = 0
-        self.filehandle = None
         self.internal_fh = 0
         self.sheet_name = "Sheet"
         self.chart_name = "Chart"
@@ -135,7 +134,6 @@ class Workbook(xmlwriter.XMLwriter):
         self.custom_colors = []
         self.doc_properties = {}
         self.custom_properties = []
-        self.createtime = datetime.now(timezone.utc)
         self.num_vml_files = 0
         self.num_comment_files = 0
         self.x_window = 240
