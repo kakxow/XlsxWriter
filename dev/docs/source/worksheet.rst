@@ -2409,6 +2409,9 @@ worksheet.autofilter()
    :type  last_row:    int
    :type  last_col:    int
 
+   :returns:  0: Success.
+   :returns: -1: Row or column is out of worksheet bounds.
+
 The ``autofilter()`` method allows an autofilter to be added to a worksheet. An
 autofilter is a way of adding drop down lists to the headers of a 2D range of
 worksheet data. This allows users to filter the data based on simple criteria

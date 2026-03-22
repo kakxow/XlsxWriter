@@ -2545,6 +2545,12 @@ class Worksheet(xmlwriter.XMLwriter):
         if last_col < first_col:
             first_col, last_col = (last_col, first_col)
 
+        # Check that row and col are valid without storing the values.
+        if self._check_dimensions(first_row, first_col, True, True):
+            return -1
+        if self._check_dimensions(last_row, last_col, True, True):
+            return -1
+
         # Build up the autofilter area range "Sheet1!$A$1:$C$13".
         area = self._convert_name_area(first_row, first_col, last_row, last_col)
         ref = xl_range(first_row, first_col, last_row, last_col)
@@ -2565,6 +2571,8 @@ class Worksheet(xmlwriter.XMLwriter):
                     )
 
             self.filter_cells[(first_row, col)] = ("worksheet", ref)
+
+        return 0
 
     def filter_column(self, col: int, criteria: str) -> None:
         """
