@@ -707,6 +707,7 @@ class Chart(xmlwriter.XMLwriter):
             "position": options.get("position"),
             "label_position": options.get("label_position"),
             "label_align": options.get("label_align"),
+            "label_offset": options.get("label_offset"),
             "num_format": options.get("num_format"),
             "num_format_linked": options.get("num_format_linked"),
             "interval_unit": options.get("interval_unit"),
@@ -2160,7 +2161,7 @@ class Chart(xmlwriter.XMLwriter):
         self._write_label_align(x_axis.get("label_align"))
 
         # Write the c:labelOffset element.
-        self._write_label_offset(100)
+        self._write_label_offset(x_axis.get("label_offset") or 100)
 
         # Write the c:tickLblSkip element.
         self._write_c_tick_lbl_skip(x_axis.get("interval_unit"))

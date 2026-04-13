@@ -296,6 +296,7 @@ The options that can be set are::
     log_base
     label_position
     label_align
+    label_offset
     major_gridlines
     minor_gridlines
     visible
@@ -482,6 +483,14 @@ the axis types.
   For example::
 
     chart.set_x_axis({'label_align': 'left'})
+
+* ``label_offset``: Set the "Axis labels" distance from the axis in percents.
+  (Applicable to category axes only.)
+  Minimum value is 0%, maximum value is 1000%, default is 100%.
+
+  For example::
+
+    chart.set_x_axis({'label_offset': 300})
 
 * ``major_gridlines``: Configure the major gridlines for the axis. The
   available properties are::

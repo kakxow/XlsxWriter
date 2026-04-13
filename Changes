@@ -8,6 +8,9 @@ Release 3.3.0 - Month XX 2025
 
 * Added alt text ``description`` and ``title`` options to worksheet Tables.
 
+* Added ``label_offset`` option to ``chart.set_x_axis()`` and
+  ``chart.set_y_axis()`` methods.
+
 
 Release 3.2.9 - September 16 2025
 ---------------------------------
